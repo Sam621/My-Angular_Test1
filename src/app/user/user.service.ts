@@ -12,16 +12,19 @@ export class UserService {
 
   userList: IUser[] = [
     {
+      Username: 'John',
       FirstName: 'John',
       LastName: 'Michel',
       Active: false
     },
     {
+      Username: 'John2',
       FirstName: 'John2',
       LastName: 'Michel2',
       Active: false
     },
     {
+      Username: 'John3',
       FirstName: 'John3',
       LastName: 'Michel3',
       Active: false
