@@ -33,7 +33,9 @@ export class UserService {
   getUserList(): IUser[] {
     return this.userList;
     }
-
+    setUserList(userList:  IUser[]) {
+      return this.userList = userList;
+      }
 
     getUserById(Id: number): IUser {
             return this.userList[Id];
