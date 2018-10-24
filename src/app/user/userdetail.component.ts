@@ -22,27 +22,12 @@ export class UserdetailComponent implements OnInit {
 
   updateUser(ob: IUser) {
     this.userList =  this.userService.userList;
-    for (let i = 0; i <  this.userList.length; i++) {
-        if (this.userList[i].Username === ob.Username) {
-          this.userList[i].FirstName = ob.FirstName;
-          this.userList[i].LastName = ob.LastName;
-          break;
-        }
-    }
-
-    // this.userList.forEach(function (item) {
-    //    if (item.Username === ob.Username) {
-    //       item.LastName = ob.LastName;
-    //       item.FirstName = ob.FirstName;
-    //    }
-    // // let userList =  this.userService.userList;
-
-        // this.routes.navigateByUrl('user');
-     // });
-
-     this.userList.forEach(function(a) {
-      console.log(a.FirstName + ':' + a.LastName);
-    });
+    this.userList.forEach(function (item) {
+       if (item.Username === ob.Username) {
+          item.LastName = ob.LastName;
+          item.FirstName = ob.FirstName;
+       }
+     });
     this.userService.setUserList(this.userList);
     this.router.navigate(['/user']);
   }
